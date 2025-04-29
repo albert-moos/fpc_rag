@@ -73,3 +73,15 @@ Content-Type: application/json
 {
   "query": "What is the compliance process?"
 }
+
+## 🧱 Architecture
+
+* Embedding: Local service via LocalEmbeddings.
+* Storage: Vector index using Weaviate.
+* Retrieval: Top-k document retrieval + reranking (via Cohere).
+* LLM: Azure OpenAI GPT-4 (or GPT-3.5 as configured).
+* API Layer: FastAPI.
+
+## 🛠 Local Embedding Service
+
+Ensure your embedding service is running at the specified URL (`LOCAL_EMBEDDING_SERVICE_URL`). It must expose a POST endpoint that accepts text payloads (likely a list of strings) and returns corresponding vector embeddings, in a format expected by the `LocalEmbeddings` class used in `main.py`.
