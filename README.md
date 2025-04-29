@@ -66,10 +66,10 @@ This repository provides a sample implementation of a Retrieval-Augmented Genera
 
 ## 📥 Sample Request
 
-```json
+
 POST /query
 Content-Type: application/json
-
+```json
 {
   "query": "What is the compliance process?"
 }
