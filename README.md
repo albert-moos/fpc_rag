@@ -73,6 +73,7 @@ Content-Type: application/json
 {
   "query": "What is the compliance process?"
 }
+```
 
 ## 🧱 Architecture
 
